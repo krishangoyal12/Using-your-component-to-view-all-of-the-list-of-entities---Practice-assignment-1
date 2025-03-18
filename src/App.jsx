@@ -1,4 +1,7 @@
+import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
+import Library from './Pages/Library';
+
 
 function App() {
   const books = [
@@ -34,7 +37,13 @@ function App() {
     },
   ];
 
-  return <>{/* write code to display all the books using */}</>;
+  return (
+    <>
+    <Routes>
+      <Route path='/' element = {<Library books = {books}/>}/>
+    </Routes>
+    </>
+  )
 }
 
 export default App;
